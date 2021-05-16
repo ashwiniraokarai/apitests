@@ -10,4 +10,5 @@ application up and running.
 * To plug in rspec framework:
   - In your gemfile add *gem 'rspec-rails', '~> 5.0.0'* to dev and test environments, and run bundle after
   - gemlock file is automatically updated for you
-  - run *rspec* command in the terminal to confirm successful installation (should see no errors and a typical "no examples" found message to establish rspec runner executed)
+  - Run *rspec* command in the terminal to confirm successful installation (should see no errors and a typical "no examples" found message to establish rspec runner executed)
+  - Run *rails generate rspec:install* to install standard rspec helper files 
