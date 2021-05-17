@@ -26,10 +26,10 @@ RSpec.describe "game consoles" do
     end
   end
 
-  # describe "POST to game consoles" do
-  #   it "creates and adds a new game console to the list" do
-  #     post "/game_consoles"
-  #     expect(response.status).to eq(201)
-  #   end
-  # end
+  describe "POST to game consoles" do
+    it "creates and adds a new game console to the list" do
+      post "/game_consoles", params: {name: "PS1", manufacturer: "Sony"}
+      expect(response_json["consoles"]).to eq({ "name" => "PS1", "manufacturer" => "Sony"})
+    end
+  end
 end
