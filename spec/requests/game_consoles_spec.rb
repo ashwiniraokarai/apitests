@@ -1,6 +1,4 @@
 require "rails_helper"
-require_relative ".././support/request_helper"
-include RequestHelper
 
 RSpec.describe "game consoles" do
   describe "GET game consoles" do
