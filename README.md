@@ -12,3 +12,17 @@ application up and running.
   - gemlock file is automatically updated for you
   - Run *rspec* command in the terminal to confirm successful installation (should see no errors and a typical "no examples" found message to establish rspec runner executed)
   - Run *rails generate rspec:install* to install standard rspec helper files 
+  
+
+* In your spec file:
+  - You want to require the standard rails helper via `require "rails_helper"`
+
+
+* To add your own helper methods:
+  - Write your helper methods in a helper file (call it anything you want - but a relevant name obviously makes it findable)
+  - Wrap your helper methods in a module named after the helper file name (e.g: Methods in a helper file *request_helper.rb* should be wrapped inside a *RequestHelper* module)
+  - You want to place all your helper files under a *support* folder under the *spec* directory 
+  - Make helper file and module available/ reachable in your spec file
+    - E.g.: 
+      - `require_relative ".././support/request_helper"`
+      - `include RequestHelper`
