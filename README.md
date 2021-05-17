@@ -26,3 +26,9 @@ application up and running.
     - E.g.: 
       - `require_relative ".././support/request_helper"`
       - `include RequestHelper`
+
+* To make helper module globally available to all spec files
+  - Global configurations go under rails_helper.rb
+  - E.g.:
+      - `require_relative './support/request_helper' (make file available)`
+      - `config.include RequestHelper (make module inside the required file available)`
